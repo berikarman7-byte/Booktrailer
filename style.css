@@ -1,0 +1,805 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+
+/* ОБЩИЕ НАСТРОЙКИ */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: #111;
+
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ФОНОВОЕ ИЗОБРАЖЕНИЕ */
+
+.background {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.85)
+        ),
+
+        url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920&q=80");
+
+
+    background-size: cover;
+
+    background-position: center;
+
+    z-index: -1;
+
+}
+
+
+
+/* ШАПКА */
+
+header {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 30px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.logo {
+
+    font-size: 20px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+}
+
+
+.logo span {
+
+    color: #d8b57b;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: #d8b57b;
+
+}
+
+
+
+/* ГЛАВНЫЙ ЭКРАН */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 12%;
+
+}
+
+
+.hero-content {
+
+    max-width: 750px;
+
+}
+
+
+.author {
+
+    color: #d8b57b;
+
+    letter-spacing: 6px;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 110px;
+
+    font-weight: 500;
+
+    line-height: 0.8;
+
+    letter-spacing: 3px;
+
+}
+
+
+.line {
+
+    width: 130px;
+
+    height: 2px;
+
+    background: #d8b57b;
+
+    margin: 40px 0;
+
+}
+
+
+.subtitle {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #ddd;
+
+    max-width: 500px;
+
+}
+
+
+
+/* КНОПКИ */
+
+button {
+
+    margin-top: 35px;
+
+    padding: 16px 35px;
+
+    border: 1px solid #d8b57b;
+
+    background: transparent;
+
+    color: white;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+
+}
+
+
+button:hover {
+
+    background: #d8b57b;
+
+    color: black;
+
+}
+
+
+.scroll {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #ccc;
+
+}
+
+
+
+/* О КНИГЕ */
+
+.about {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background:
+
+        linear-gradient(
+            rgba(10, 10, 10, 0.94),
+            rgba(20, 20, 20, 0.96)
+        );
+
+}
+
+
+.section-content {
+
+    max-width: 850px;
+
+}
+
+
+.small-title {
+
+    color: #d8b57b;
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.about h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 65px;
+
+    font-weight: 500;
+
+    margin-bottom: 40px;
+
+}
+
+
+.text {
+
+    color: #bbb;
+
+    line-height: 1.9;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* ГЛАВНАЯ МЫСЛЬ */
+
+.meaning {
+
+    min-height: 85vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background: #1b1816;
+
+}
+
+
+.meaning-content {
+
+    max-width: 800px;
+
+}
+
+
+.meaning h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 65px;
+
+    font-weight: 500;
+
+    margin-bottom: 40px;
+
+}
+
+
+.meaning p {
+
+    color: #bbb;
+
+    line-height: 1.9;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* ИСТОРИЯ */
+
+.story {
+
+    padding: 120px 10%;
+
+    background: #161616;
+
+}
+
+
+.story > h2 {
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 65px;
+
+    font-weight: 500;
+
+    margin-bottom: 70px;
+
+}
+
+
+.story-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+/* КАРТОЧКИ */
+
+.card {
+
+    width: 280px;
+
+    padding: 45px 30px;
+
+    background: #202020;
+
+    border: 1px solid #333;
+
+    transition: 0.5s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-15px);
+
+    border-color: #d8b57b;
+
+}
+
+
+.card span {
+
+    font-size: 13px;
+
+    color: #d8b57b;
+
+    letter-spacing: 3px;
+
+}
+
+
+.card h3 {
+
+    margin: 25px 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 35px;
+
+    font-weight: 500;
+
+}
+
+
+.card p {
+
+    color: #aaa;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* АТМОСФЕРНАЯ СЕКЦИЯ */
+
+.atmosphere {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.9)
+        ),
+
+        url("https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=1920&q=80");
+
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.atmosphere-content p {
+
+    color: #d8b57b;
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.atmosphere h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 90px;
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+}
+
+
+
+/* ЦИТАТА */
+
+.quote {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: #111;
+
+}
+
+
+.quote-box {
+
+    max-width: 1000px;
+
+}
+
+
+.quote-symbol {
+
+    font-family: serif;
+
+    font-size: 120px;
+
+    color: #d8b57b;
+
+}
+
+
+.quote h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 55px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+}
+
+
+.quote p {
+
+    margin-top: 40px;
+
+    color: #d8b57b;
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+
+}
+
+
+
+/* ФИНАЛ */
+
+.final {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            rgba(20, 15, 10, 0.9),
+            rgba(0, 0, 0, 0.97)
+        );
+
+}
+
+
+.final-content p {
+
+    color: #d8b57b;
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+
+}
+
+
+.final h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 100px;
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    margin-top: 30px;
+
+}
+
+
+#message {
+
+    margin-top: 25px;
+
+    color: white;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+/* ПОДВАЛ */
+
+footer {
+
+    background: black;
+
+    padding: 40px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 2;
+
+}
+
+
+
+/* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНА */
+
+@media (max-width: 768px) {
+
+
+    header {
+
+        padding: 25px;
+
+    }
+
+
+    nav {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        padding: 0 30px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 65px;
+
+    }
+
+
+    .author {
+
+        font-size: 10px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 15px;
+
+    }
+
+
+    .about h2 {
+
+        font-size: 42px;
+
+    }
+
+
+    .meaning h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    .story > h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    .atmosphere h2 {
+
+        font-size: 55px;
+
+    }
+
+
+    .quote h2 {
+
+        font-size: 35px;
+
+    }
+
+
+    .final h2 {
+
+        font-size: 60px;
+
+    }
+
+
+    .card {
+
+        width: 100%;
+
+        max-width: 330px;
+
+    }
+
+}
